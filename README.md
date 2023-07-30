@@ -1,5 +1,5 @@
-Ayeni Ayodeji's Portfolio and RESUME
-URL - https://portfolio-resume-ayeniayodeji2009.vercel.app/
+Ayeni Ayodeji's Profile Portfolio and RESUME
+URL - https://profile-ayeniayodeji2009.vercel.app/
 
 
 Reference for Debugging
