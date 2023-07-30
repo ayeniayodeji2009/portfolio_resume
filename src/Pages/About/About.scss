@@ -1,0 +1,113 @@
+@import "../../Styling/Mixins.scss";
+
+.about {
+  padding: 1rem 3rem;
+   max-width: 1760px;
+  margin: 0 auto;
+
+  @include respond(tab-port) {
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  &__intro {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(tab-land) {
+      grid-template-columns: 55% 45%;
+      padding: 1rem;
+      grid-gap: 1%;
+    }
+    @include respond(tab-port) {
+      grid-template-columns: 100%;
+      padding: 1rem;
+      grid-gap: 5%;
+    }
+
+    &_text {
+      a {
+        color: var(--light-color);
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--secondary-color);
+          // background-color: var(--accent-color);
+          border-color: var(--secondary-color);
+        }
+      }
+    }
+
+    &_img {
+      position: relative;
+      text-align: center;
+      width: 70%;
+      height: 90%;
+      margin: auto;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 7px;
+        transition: all 0.5s ease;
+        filter: grayscale(100%);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--light-color);
+        top: 2rem;
+        right: 2rem;
+        z-index: -1;
+        transition: all 0.5s ease;
+        border-radius: 7px;
+        box-shadow: var(--box-shadow);
+      }
+
+      &:hover {
+        img {
+          // add blur effect to the image
+          // filter: blur(2px);
+          filter: grayscale(0%);
+        }
+
+        &::before {
+          top: -1rem;
+          right: 1rem;
+          border: 1px solid var(--accent-color);
+        }
+      }
+    }
+  }
+
+  &__tech {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+
+    > * {
+      font-size: 2rem;
+      margin-right: 1rem;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        transform: scale(1.3);
+        color: var(--secondary-color);
+      }
+    }
+  }
+}

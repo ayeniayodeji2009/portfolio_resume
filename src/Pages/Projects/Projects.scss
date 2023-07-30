@@ -1,0 +1,135 @@
+@import "../../Styling/Utils.scss";
+@import "../../Styling/Mixins.scss";
+
+.projects {
+  padding: 1rem 4rem;
+  max-width: 1760px;
+  margin: 0 auto;
+
+  @include respond(tab-port) {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  ._text {
+    a {
+      color: var(--light-color);
+
+      &:hover {
+        text-decoration: underline;
+        color: var(--secondary-color);
+        border-color: var(--secondary-color);
+      }
+    }
+  }
+
+  &__container {
+    section {
+      border: 2px solid var(--secondary-color);
+      border-radius: 10px;
+      margin: 2.8rem 0;
+      padding: 0.5rem 3rem;
+      box-shadow: var(--box-shadow);
+
+      @include respond(phone) {
+        padding: 0.5rem;
+      }
+
+      &:nth-child(even) {
+        .singleProject {
+          flex-direction: row-reverse;
+          @include respond(tab-port) {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    .singleProject {
+      display: flex;
+      justify-content: space-between;
+      > * {
+        width: 45%;
+        @include respond(tab-port) {
+          width: 100%;
+        }
+      }
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+      .imageContainer {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .textContainer {
+        @include respond(tab-port) {
+          margin-top: 1.6rem;
+        }
+        .details {
+          .panel-content {
+            ul {
+              li {
+                list-style: circle;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: var(--accent-color);
+  font-size: 2rem !important;
+}
+
+.react-tabs {
+  box-shadow: var(--box-shadow);
+  display: flex;
+  width: auto;
+  height: 100%;
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+}
+
+.react-tabs__tab-list {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+.react-tabs__tab {
+  padding: 12px 6px;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  border-left: 4px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.react-tabs__tab-panel {
+  display: none;
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 10px 2rem;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.react-tabs__tab {
+  padding-left: 24px;
+}
+
+.panel-content {
+  text-align: left;
+}

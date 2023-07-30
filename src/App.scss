@@ -1,0 +1,157 @@
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/nt-vanilla");
+@import url("https://fonts.cdnfonts.com/css/mioge");
+@import "../src/Styling/Mixins.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --secondary-color: #000503;
+  --primary-color: #2c9962;
+  --text-color: #c8d1d0;
+  --light-color: #575151;
+  --accent-color: #00ff8c;
+  --box-shadow: 0 1px 1px 1px #000a0639;
+  --font-main: "NT Vanilla", sans-serif;
+  --font-base: "Mioge", sans-serif;
+  --transition: all 0.5s ease;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  letter-spacing: 1.1px;
+  width: 100vw;
+  font-size: 16px;
+  padding-right: 30px;
+
+  cursor: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+li {
+  list-style: none;
+}
+
+.App {
+  position: relative;
+}
+
+p, li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  // @media only screen and (min-width: 1560px) {
+  //   font-size: 1vw;
+  // }
+  @include respond(phone) {
+    font-family: "poppins", sans-serif;
+    font-size: 0.8rem;
+  }
+}
+img {
+  width: 100%;
+}
+
+button,
+a {
+  color: inherit;
+  text-decoration: none;
+  background: none;
+  border: none;
+}
+
+.marquee {
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  overflow: hidden;
+  font-weight: 700;
+  color: black;
+  font-size: 16rem;
+  pointer-events: none;
+  letter-spacing: 15px;
+  opacity: 0.05;
+  font-family: var(--font-base);
+
+  // @media screen and (max-width: 600px) {
+  //   display: none;
+  // }
+}
+.d-f {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.d-f-col {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+::placeholder {
+  opacity: 0.5;
+}
+@keyframes colors {
+  0% {
+    background-color: var(--light-color);
+  }
+  50% {
+    background-color: var(--accent-color);
+  }
+  100% {
+    background-color: var(--text-color);
+  }
+}
+.cursor1 {
+  width: 10px;
+  height: 10px;
+  position: fixed;
+  border: 1px solid var(--light-color);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.13s;
+  z-index: 999;
+  background-color: var(--light-color);
+  &.hide {
+    opacity: 0;
+  }
+
+  // hide if device is touchscreen or mobile
+  @media (hover: none) and (pointer: coarse) {
+    display: none !important;
+  }
+}
+
+.cursor {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--light-color);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+  z-index: 999;
+  &.hide {
+    opacity: 0;
+  }
+  &.link-grow {
+    width: 100px;
+    height: 100px;
+    background-color: #46434c50;
+    border: none;
+  }
+  @media (hover: none) and (pointer: coarse) {
+    display: none !important;
+  }
+}
