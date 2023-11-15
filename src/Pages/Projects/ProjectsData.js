@@ -2,6 +2,7 @@
 import pick_dice_game from "../../Assets/img/pick_dice_game.png";
 import scissor_url_shortner from "../../Assets/img/scissor_url_shortner.png";
 import vue_counter_app from "../../Assets/img/vue_counter_app.png";
+import carwash_cutomer_list from "../../Assets/img/pic_carwash_service.png"
 //import ai from "../../Assets/img/gener8.png";
 // import mov from "../../Assets/img/movieApp.png";
 // import cocktail from "../../Assets/img/cocktaily.png";
@@ -50,15 +51,21 @@ export const ProjectsData = [
     stack: ["HTML", "CSS", "Javascript", "Vue"],
   },
 
-  // {
-  //   id: 3,
-  //feats: "",
-  //   name: "Edutech Website",
-  //   det: "Implementation of a figma website design using HTML, Sass and Vanilla Javascript",
-  //   code: "https://github.com/mo-renike/edutech",
-  //   live: "https://mo-renike.github.io/edutech/",
-  //   img: edutech,
-  // },
+  {
+    id: 4,
+    feats: [
+      "Search Query",
+      "Data fetch from RESTful API",
+      "Set number of Contacts to desired number of choice with option choice",
+      "Friendly User Interface"
+    ],
+    name: "Car wash customer List",
+    det: "Implementation of website design using HTML, CSS, Vanilla Javascript, React.js and RESTful API",
+    live: "https://carwash-customers.vercel.app/",
+    code: "https://github.com/ayeniayodeji2009/carwash-customers",
+    image: carwash_cutomer_list,
+    stack: ["HTML", "CSS", "Vanilla Javascript", "React.js", "RESTful API"],
+  },
   // {
   //   id: 5,
   //   name: "Movies Review App",
