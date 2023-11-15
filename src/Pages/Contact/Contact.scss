@@ -23,6 +23,7 @@
     align-items: center;
     margin: auto;
     margin-top: 0;
+    color: var(--secondary-color);
     > * {
       align-items: center;
 
@@ -34,12 +35,16 @@
       @include respond(phone) {
         font-size: 1rem;
       }
+      &:hover {
+        transform: scale(1.2);
+        color: white;
+      }
     }
     .zoom {
       transition: all 0.7s ease;
       &:hover {
         transform: scale(1.4);
-        color: var(--secondary-color);
+        color: white;
       }
     }
   }

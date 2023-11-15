@@ -11,14 +11,19 @@
     margin-top: 2rem;
   }
 
+  .projectName {
+    color: var(--secondary-color);
+  }
+
   ._text {
     a {
-      color: var(--light-color);
+      color: var(--secondary-color);// var(--light-color);
 
       &:hover {
         text-decoration: underline;
         color: var(--secondary-color);
         border-color: var(--secondary-color);
+        font-weight: bolder;
       }
     }
   }

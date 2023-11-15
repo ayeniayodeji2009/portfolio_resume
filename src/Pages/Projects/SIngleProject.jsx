@@ -17,7 +17,7 @@ const SIngleProject = ({
     return (
         <section>
             <br />
-            <h2>{name}</h2>
+            <h2 className="projectName">{name}</h2>
             <br />
             <div className="singleProject">
                 <div className="imageContainer">
