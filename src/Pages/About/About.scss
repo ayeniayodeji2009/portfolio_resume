@@ -111,8 +111,12 @@
       }
     }
   }
+  em {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+  }
 
-  .btn, em {
+  .btn{
     color: var(--secondary-color);
     border-color: var(--secondary-color);
 
