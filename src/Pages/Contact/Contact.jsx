@@ -30,7 +30,7 @@ const Contact = () => {
                         <FaWhatsapp /> Whatsapp Me
                     </a>
                 </div>
-                <a className="hover-btm mr-2" target="_blank" href="https://docs.google.com/document/d/1giNdvKqpZU_UM3YTH1NwnS1sBla5-KQVT8Mj83YJijg/edit?usp=sharing" rel="noreferrer"
+                <a className="hover-btm mr-2" target="_blank" href="https://drive.google.com/file/d/1dWI4Sl7-r1n-_G8xmOpTDMpzF-UFriTJ/view?usp=sharing" rel="noreferrer"
                 ><FaDownload /> View my resume</a>
                 <div className="d-f">
                     <a title="GitHub" className="mr-1 zoom" href="https://github.com/ayeniayodeji2009">
