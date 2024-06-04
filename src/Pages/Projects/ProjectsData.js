@@ -3,6 +3,7 @@ import pick_dice_game from "../../Assets/img/pick_dice_game.png";
 import scissor_url_shortner from "../../Assets/img/scissor_url_shortner.png";
 import vue_counter_app from "../../Assets/img/vue_counter_app.png";
 import carwash_cutomer_list from "../../Assets/img/pic_carwash_service.png"
+import griotreporter from "../../Assets/img/griotreporter.png"
 //import ai from "../../Assets/img/gener8.png";
 // import mov from "../../Assets/img/movieApp.png";
 // import cocktail from "../../Assets/img/cocktaily.png";
@@ -50,7 +51,6 @@ export const ProjectsData = [
     image: vue_counter_app,
     stack: ["HTML", "CSS", "Javascript", "Vue"],
   },
-
   {
     id: 4,
     feats: [
@@ -65,6 +65,21 @@ export const ProjectsData = [
     code: "https://github.com/ayeniayodeji2009/carwash-customers",
     image: carwash_cutomer_list,
     stack: ["HTML", "CSS", "Vanilla Javascript", "React.js", "RESTful API"],
+  },
+  {
+    id: 5,
+    feats: [
+      "Blog Website",
+      "Built with Wordpress",
+      "use of Wordpress plugins",
+      "Day and Night UI view"
+    ],
+    name: "griotreporter",
+    det: "Implementation of website design using HTML, CSS and Wordpress.",
+    live: "https://www.griotreporter.com/",
+    code: "https://www.griotreporter.com/",
+    image: griotreporter,
+    stack: ["HTML", "CSS", "Wordpress", "Wordpress Plugins"],
   },
   // {
   //   id: 5,
